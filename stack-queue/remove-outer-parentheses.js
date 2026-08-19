@@ -3,27 +3,22 @@
 
 // //   1.-without using stack we can use counter variable to keep track of open and close parentheses brute force approach
 // var removeOuterParentheses = function(s) {
-//     let stack = [];
-//     let counter = 0
+//     let label = 0;
+//     let str = "";
 //     for(let i=0; i<s.length; i++){
-//         if(s[i]==='('){
-//             ++counter;
+//         if(s[i]==="("){
+//             ++label;
+//             if(label>1){
+//                 str+=s[i];
+//             }
 //         }else{
-//             --counter;
-//         }
-
-//         if(counter===1 && s[i]==='('){
-//             stack.push(i);
-//         }else if(counter===0 && s[i]===')'){
-//             stack.push(i);
+//             if(label>1){
+//                 str+=s[i];
+//             }
+//             --label;
 //         }
 //     }
-//     let newStr = "";
-//     console.log(stack)
-//     for(let i=0; i<stack.length; i+=2){
-//         newStr += s.slice(stack[i]+1,stack[i+1]);
-//     }
-//     console.log(newStr)
+// return str;
 // };
 
 
